@@ -22,15 +22,13 @@ class _LoadingAnimationState extends State<LoadingAnimation>
       duration: const Duration(milliseconds: 1000),
     )..repeat(reverse: true);
 
-    // بيكبر ويصغر
     _scale = Tween<double>(begin: 0.8, end: 1.2).animate(
       CurvedAnimation(parent: _controller, curve: Curves.easeInOut),
     );
 
-    // بيتلون لونين بس
     _color = ColorTween(
-      begin: const Color(0xFFFF6B6B), // أحمر
-      end: const Color(0xFF4DA3FF),   // أزرق
+      begin: const Color(0xFFFF6B6B),
+      end: const Color(0xFF4DA3FF),
     ).animate(_controller);
   }
 
